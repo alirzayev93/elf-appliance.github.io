@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ELF Appliance | Repair Experts</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <a href="#">ELF Appliance</a>
+      </div>
+      <nav class="nav">
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__list">
+          <li><a href="#">Home</a></li>
+          <li class="has-dropdown">
+            <button class="nav__link" aria-expanded="false">
+              About Us
+              <span class="chevron">&#9662;</span>
+            </button>
+            <ul class="dropdown">
+              <li><a href="#services">Our Services</a></li>
+              <li><a href="#contact">Service Area</a></li>
+              <li><a href="#reviews">Testimonials</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <button class="nav__link" aria-expanded="false">
+              Services
+              <span class="chevron">&#9662;</span>
+            </button>
+            <ul class="dropdown">
+              <li><a href="#services">Stove &amp; Oven Repair</a></li>
+              <li><a href="#services">Refrigerator &amp; Ice Maker</a></li>
+              <li><a href="#services">Garbage Disposal</a></li>
+              <li><a href="#services">Washer Repair</a></li>
+              <li><a href="#services">Dryer Repair</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <button class="nav__link" aria-expanded="false">
+              Reviews
+              <span class="chevron">&#9662;</span>
+            </button>
+            <ul class="dropdown">
+              <li><a href="#reviews">Customer Stories</a></li>
+              <li><a href="#faq">FAQs</a></li>
+            </ul>
+          </li>
+          <li class="nav__cta">
+            <a class="btn primary" href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Trusted Local Service</p>
+        <h1>ELF Appliance Repair</h1>
+        <p class="hero__subtitle">
+          Fast, reliable appliance repair for refrigerators, ovens, washers,
+          dryers, and more across the metro area.
+        </p>
+        <div class="hero__actions">
+          <a class="btn primary" href="#contact">Book Service</a>
+          <a class="btn ghost" href="#services">View Services</a>
+          <a class="btn ghost" href="#contact-info">Contact Us</a>
+        </div>
+        <p class="hero__phone">
+          Call us: <a href="tel:+17326949575">(732) 694-9575</a>
+        </p>
+      </div>
+      <div class="hero__icons" aria-hidden="true">
+        <div class="hero__icon-card">
+          <svg class="hero__icon" viewBox="0 0 48 48" aria-hidden="true">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="6" y="6" width="36" height="36" rx="6" />
+              <circle cx="24" cy="24" r="10" />
+              <circle cx="30" cy="14" r="2" />
+              <circle cx="34" cy="14" r="2" />
+            </g>
+          </svg>
+          <p>Washer</p>
+        </div>
+        <div class="hero__icon-card">
+          <svg class="hero__icon" viewBox="0 0 48 48" aria-hidden="true">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="8" y="8" width="32" height="32" rx="6" />
+              <path d="M12 32h24" />
+              <path d="M16 20c2-3 6-3 8 0s6 3 8 0" />
+            </g>
+          </svg>
+          <p>Dryer</p>
+        </div>
+        <div class="hero__icon-card">
+          <svg class="hero__icon" viewBox="0 0 48 48" aria-hidden="true">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="12" y="6" width="24" height="36" rx="3" />
+              <line x1="12" y1="26" x2="36" y2="26" />
+              <line x1="20" y1="12" x2="28" y2="12" />
+              <line x1="20" y1="18" x2="28" y2="18" />
+            </g>
+          </svg>
+          <p>Refrigerator</p>
+        </div>
+        <div class="hero__icon-card">
+          <svg class="hero__icon" viewBox="0 0 48 48" aria-hidden="true">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="8" y="12" width="32" height="24" rx="4" />
+              <circle cx="18" cy="20" r="4" />
+              <circle cx="30" cy="20" r="4" />
+              <line x1="12" y1="30" x2="36" y2="30" />
+            </g>
+          </svg>
+          <p>Oven/Range</p>
+        </div>
+        <div class="hero__icon-card">
+          <svg class="hero__icon" viewBox="0 0 48 48" aria-hidden="true">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="8" y="10" width="32" height="28" rx="4" />
+              <line x1="12" y1="20" x2="36" y2="20" />
+              <line x1="16" y1="26" x2="32" y2="26" />
+              <circle cx="18" cy="16" r="2" />
+              <circle cx="30" cy="16" r="2" />
+            </g>
+          </svg>
+          <p>Dishwasher</p>
+        </div>
+        <div class="hero__icon-card">
+          <svg class="hero__icon" viewBox="0 0 48 48" aria-hidden="true">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="10" y="12" width="28" height="24" rx="2" />
+              <rect x="28" y="16" width="8" height="12" rx="1" />
+              <line x1="16" y1="26" x2="24" y2="26" />
+            </g>
+          </svg>
+          <p>Microwave</p>
+        </div>
+        <div class="hero__icon-card">
+          <svg class="hero__icon" viewBox="0 0 48 48" aria-hidden="true">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="10" y="12" width="28" height="24" rx="2" />
+              <rect x="28" y="16" width="8" height="12" rx="1" />
+              <line x1="16" y1="26" x2="24" y2="26" />
+            </g>
+          </svg>
+          <p>Other</p>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="services" class="section">
+        <div class="section__header">
+          <p class="eyebrow">What We Fix</p>
+          <h2>Appliance Repair Services</h2>
+          <p>
+            We keep your home running with licensed technicians, OEM parts, and
+            upfront pricing. We work on all brands of appliances, including:
+          </p>
+          <ul class="services-list">
+            <li>Washers and Dryers</li>
+            <li>Dishwashers</li>
+            <li>Freezers</li>
+            <li>Refrigerators</li>
+            <li>Wine Coolers</li>
+            <li>Ice Machines</li>
+            <li>Microwaves</li>
+            <li>Cooktops</li>
+            <li>Ovens</li>
+            <li>Garbage Disposal</li>
+            <li>Vent Cleaning</li>
+          </ul>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Kitchen Appliances</h3>
+            <p>
+              Refrigerators, freezers, ovens, stovetops, and dishwashers
+              repaired quickly to avoid food waste.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Laundry</h3>
+            <p>
+              Washer and dryer diagnostics, drum replacements, and vent cleaning
+              to improve efficiency.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Smart Diagnostics</h3>
+            <p>
+              Wi-Fi connected devices, onboard error codes, and firmware updates
+              handled with care.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--accent">
+        <div class="section__header">
+          <p class="eyebrow">Why ELF Appliance?</p>
+          <h2>Honest Work. Modern Tools.</h2>
+          <p>
+            We combine decades of experience with digital scheduling and
+            transparent updates.
+          </p>
+        </div>
+        <ul class="benefits">
+          <li>
+            <strong>Certified technicians</strong>
+            <span>EPA and manufacturer certified.</span>
+          </li>
+          <li>
+            <strong>90-day guarantee</strong>
+            <span>Repairs backed by parts & labor warranty.</span>
+          </li>
+          <li>
+            <strong>Upfront quotes</strong>
+            <span>No surprise fees. Approve before we repair.</span>
+          </li>
+          <li>
+            <strong>Eco-friendly disposal</strong>
+            <span>We recycle parts whenever possible.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="section__header">
+          <p class="eyebrow">Neighbors Trust Us</p>
+          <h2>Recent Service Reviews</h2>
+          <p>
+            Homeowners across the metro share their positive experiences with
+            ELF Appliance.
+          </p>
+        </div>
+        <div class="reviews-layout">
+          <aside class="review-summary">
+            <p class="eyebrow">Excellent</p>
+            <p class="review-summary__score">4.9 <span>/ 5.0</span></p>
+            <div class="review-summary__stars" aria-label="5 star rating">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <p class="review-summary__meta">
+              Based on 313 verified Google reviews
+            </p>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+              alt="Google logo"
+              class="review-summary__logo"
+            />
+          </aside>
+          <div class="review-carousel">
+            <button
+              class="review-nav review-nav--prev"
+              aria-label="Previous review"
+            >
+              &#8249;
+            </button>
+            <div class="review-track" id="reviewTrack">
+              <article class="review-card">
+                <div class="review-card__header">
+                  <div>
+                    <p class="review-card__service">Refrigerator Repair</p>
+                    <span>1 week ago</span>
+                  </div>
+                  <span class="review-card__rating"
+                    >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                  >
+                </div>
+                <p>
+                  "ELF diagnosed a failing compressor and had the fridge cooling
+                  again the same afternoon."
+                </p>
+                <p class="review-card__author">— Maria K.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-card__header">
+                  <div>
+                    <p class="review-card__service">Washer &amp; Dryer</p>
+                    <span>1 week ago</span>
+                  </div>
+                  <span class="review-card__rating"
+                    >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                  >
+                </div>
+                <p>
+                  "They leveled our washer, replaced a pump, and cleaned the
+                  dryer vent in one visit."
+                </p>
+                <p class="review-card__author">— Dustin L.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-card__header">
+                  <div>
+                    <p class="review-card__service">Dishwasher Service</p>
+                    <span>2 weeks ago</span>
+                  </div>
+                  <span class="review-card__rating"
+                    >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                  >
+                </div>
+                <p>
+                  "Transparent pricing and OEM parts meant my dishwasher stopped
+                  leaking for good."
+                </p>
+                <p class="review-card__author">— Priya D.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-card__header">
+                  <div>
+                    <p class="review-card__service">Range &amp; Oven</p>
+                    <span>3 weeks ago</span>
+                  </div>
+                  <span class="review-card__rating"
+                    >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                  >
+                </div>
+                <p>
+                  "Our oven wouldn't hold temp; ELF recalibrated everything
+                  before the dinner party."
+                </p>
+                <p class="review-card__author">— Greg A.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-card__header">
+                  <div>
+                    <p class="review-card__service">Smart Appliance Setup</p>
+                    <span>1 month ago</span>
+                  </div>
+                  <span class="review-card__rating"
+                    >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                  >
+                </div>
+                <p>
+                  "They updated firmware, reconnected Wi-Fi, and showed us how
+                  to monitor cycles remotely."
+                </p>
+                <p class="review-card__author">— Sierra P.</p>
+              </article>
+            </div>
+            <button
+              class="review-nav review-nav--next"
+              aria-label="Next review"
+            >
+              &#8250;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--accent" id="faq">
+        <div class="section__header">
+          <p class="eyebrow">Our FAQ's</p>
+          <h2>Answers For Appliance Owners</h2>
+          <p>
+            Clear answers to the most common questions about service, coverage,
+            and what to expect from ELF Appliance.
+          </p>
+        </div>
+        <div class="accordion" id="faqAccordion">
+          <article class="accordion__item is-open">
+            <button class="accordion__trigger" aria-expanded="true">
+              Which brands does ELF Appliance service?
+              <span class="accordion__icon">-</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                We work on Samsung, LG, Whirlpool, Maytag, GE, Bosch, and many
+                other leading manufacturers. Our team maintains certifications
+                for both legacy and smart appliances.
+              </p>
+            </div>
+          </article>
+          <article class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              What areas do you cover?
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                ELF Appliance serves the entire metro area, with technicians
+                based in the north, west, and downtown corridors for quick
+                dispatch.
+              </p>
+            </div>
+          </article>
+          <article class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              Do you offer same-day repair?
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                Yes! Call before noon and we can often provide same-day service
+                or temporary solutions to keep essentials running.
+              </p>
+            </div>
+          </article>
+          <article class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              Can I supply my own parts?
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                Absolutely. We will inspect your part for compatibility and
+                install it with the same warranty on labor.
+              </p>
+            </div>
+          </article>
+          <article class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              How do I know if repair beats replacement?
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                Our diagnostic includes a repair vs. replace calculator that
+                compares age, efficiency, and current repair costs so you can
+                make the confident call.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- <section class="section" id="tips">
+        <div class="section__header">
+          <p class="eyebrow">Helpful Tips</p>
+          <h2>Keep Things Running</h2>
+          <p>
+            Small maintenance steps prevent costly breakdowns. Tap for a new
+            tip.
+          </p>
+        </div>
+        <div class="tip-box" role="status" aria-live="polite">
+          <p id="tipText">
+            Clean your refrigerator coils every six months to improve cooling
+            efficiency.
+          </p>
+          <button class="btn primary" id="tipButton" type="button">
+            Show Another Tip
+          </button>
+        </div>
+      </section> -->
+
+      <section class="section" id="gallery">
+        <div class="section__header">
+          <p class="eyebrow">In The Field</p>
+          <h2>Recent Appliance Repairs</h2>
+          <p>
+            Snapshots from recent visits across Washington DC, Virginia, and
+            Maryland.
+          </p>
+        </div>
+        <div class="photo-carousel">
+          <button class="photo-nav photo-nav--prev" aria-label="Previous photo">
+            &#8249;
+          </button>
+          <div class="photo-carousel__viewport">
+            <div class="photo-carousel__track" id="photoTrack">
+              <img
+                src="photos/appliance-1.jpeg"
+                alt="Appliance repair 1"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-2.jpeg"
+                alt="Appliance repair 2"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-3.jpeg"
+                alt="Appliance repair 3"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-4.jpeg"
+                alt="Appliance repair 4"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-5.jpeg"
+                alt="Appliance repair 5"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-6.jpeg"
+                alt="Appliance repair 6"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-7.jpeg"
+                alt="Appliance repair 7"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-8.jpeg"
+                alt="Appliance repair 8"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-9.jpeg"
+                alt="Appliance repair 9"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-10.jpeg"
+                alt="Appliance repair 10"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-11.jpeg"
+                alt="Appliance repair 11"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-12.jpeg"
+                alt="Appliance repair 12"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-13.jpeg"
+                alt="Appliance repair 13"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-14.jpeg"
+                alt="Appliance repair 14"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+              <img
+                src="photos/appliance-15.jpeg"
+                alt="Appliance repair 15"
+                class="photo-carousel__item"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <button class="photo-nav photo-nav--next" aria-label="Next photo">
+            &#8250;
+          </button>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--contact">
+        <div class="section__header">
+          <p class="eyebrow">Book A Visit</p>
+          <h2>Request Service</h2>
+          <p>
+            Send us your appliance details and a preferred time. We respond
+            within one business hour.
+          </p>
+        </div>
+        <div id="contact-info" class="contact-details">
+          <div class="contact-detail">
+            <p class="eyebrow">Email Us</p>
+            <a href="mailto:sahil@elfappliance.com">sahil@elfappliance.com</a>
+            <p class="contact-detail__meta">
+              Share photos of your appliance for faster diagnostics.
+            </p>
+          </div>
+          <div class="contact-detail">
+            <p class="eyebrow">Call Us</p>
+            <a href="tel:+17326949575">(732) 694-9575</a>
+            <p class="contact-detail__meta">Live support daily from 7am-9pm.</p>
+          </div>
+          <div class="contact-detail">
+            <p class="eyebrow">Service Area</p>
+            <p class="contact-detail__meta">
+              Serving Washington DC / Virginia / Maryland
+            </p>
+          </div>
+        </div>
+        <!-- <form class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Jane Doe"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="(732) 694-9575"
+              required
+            />
+          </div>
+          <div class="form-group form-group--full">
+            <label for="details">Appliance Details</label>
+            <textarea
+              id="details"
+              name="details"
+              rows="4"
+              placeholder="Brand, model, and the issue you're seeing"
+              required
+            ></textarea>
+          </div>
+          <button class="btn primary" type="submit">Submit Request</button>
+          <p class="form__message" role="alert" aria-live="polite"></p>
+        </form> -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__cta">
+        <div>
+          <p class="eyebrow">Need Fast Help?</p>
+          <h2>Looking For Trusted Appliance Repair Services?</h2>
+          <p>Trust our experts to keep your appliances running smoothly.</p>
+        </div>
+        <a class="btn ghost footer__cta-btn" href="tel:+17326949575"
+          >Call Us Now</a
+        >
+      </div>
+      <div class="footer__grid">
+        <div class="footer__column">
+          <h3>About Us</h3>
+          <p>
+            Trust ELF Appliance to get your appliances running like new again.
+            We provide fast, reliable repairs backed by a satisfaction
+            guarantee.
+          </p>
+        </div>
+        <div class="footer__column">
+          <h3>Contact Info</h3>
+          <ul class="footer__list">
+            <li>ELF Appliance</li>
+            <li>☎ <a href="tel:+18005551234">(732) 694-9575</a></li>
+            <li>
+              ✉ <a href="mailto:care@elfappliance.com">care@elfappliance.com</a>
+            </li>
+            <li>2800 Park Center, Alexandria</li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3>Quick Links</h3>
+          <ul class="footer__list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">About Us</a></li>
+            <li><a href="#tips">Appliance Tips</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3>Our Service</h3>
+          <ul class="footer__list">
+            <li>Washing Machine Repair</li>
+            <li>Refrigerator Repair</li>
+            <li>Dryer Repair</li>
+            <li>Garbage Disposal Repair</li>
+            <li>Range Oven Repairs</li>
+          </ul>
+          <!-- <div class="footer__social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">x</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Pinterest">p</a>
+          </div> -->
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>
+          &copy; <span id="year"></span> ELF Appliance. All rights reserved.
+        </p>
+        <p>Serving the DMV area 7 days a week.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
