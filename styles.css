@@ -23,6 +23,15 @@ body {
     color: var(--color-text);
     font-family: var(--font-sans);
     line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 img {
@@ -41,7 +50,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem clamp(1rem, 5vw, 4rem);
+    padding: 1rem clamp(1rem, 4vw, 2.5rem);
     box-shadow: 0 8px 20px rgba(16, 23, 39, 0.08);
 }
 
@@ -54,6 +63,7 @@ a {
 
 .nav {
     position: relative;
+    z-index: 50;
 }
 
 .nav__toggle {
@@ -151,8 +161,10 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     align-items: center;
     gap: 2rem;
-    padding: 4rem clamp(1rem, 5vw, 6rem) 3rem;
+    padding: 4rem clamp(1rem, 4vw, 2.5rem) 3rem;
     background: radial-gradient(circle at top right, #d7ecff 0%, #f5f7fb 60%);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero__content {
@@ -211,7 +223,9 @@ a {
 }
 
 .section {
-    padding: 3.5rem clamp(1rem, 6vw, 6rem);
+    padding: 3.5rem clamp(1rem, 5vw, 2.5rem);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .section--accent {
@@ -393,6 +407,8 @@ a {
     align-items: center;
     grid-template-columns: auto 1fr auto;
     gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .photo-carousel__viewport {
@@ -408,6 +424,7 @@ a {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 0.5rem;
+    width: 100%;
 }
 
 .photo-carousel__track::-webkit-scrollbar {
@@ -415,8 +432,8 @@ a {
 }
 
 .photo-carousel__item {
-    flex: 0 0 clamp(240px, 60vw, 420px);
-    height: clamp(180px, 40vw, 320px);
+    flex: 0 0 clamp(240px, 55vw, 420px);
+    height: clamp(180px, 38vw, 320px);
     object-fit: cover;
     border-radius: var(--radius);
     scroll-snap-align: start;
@@ -707,7 +724,8 @@ textarea:focus {
 
 @media (max-width: 600px) {
     .hero {
-        padding: calc(var(--header-height, 72px) + 1rem) 1rem 3rem;
+        grid-template-columns: 1fr;
+        padding: calc(var(--header-height, 72px) + 1rem) 1rem 2.5rem;
     }
 
     .hero__actions {
@@ -720,8 +738,13 @@ textarea:focus {
         justify-content: center;
     }
 
+    .hero__content {
+        max-width: 100%;
+    }
+
     .hero__icons {
         grid-template-columns: repeat(2, minmax(120px, 1fr));
+        width: 100%;
     }
 
     .reviews-layout {
@@ -734,6 +757,15 @@ textarea:focus {
 
     .review-nav {
         display: none;
+    }
+
+    .section {
+        padding: 2.5rem 1rem;
+    }
+
+    .photo-carousel__item {
+        flex: 0 0 80vw;
+        height: clamp(180px, 55vw, 260px);
     }
 
     .photo-carousel {
@@ -758,13 +790,14 @@ textarea:focus {
     .nav__list {
         position: fixed;
         top: calc(72px + 0.5rem);
-        left: 1rem;
-        right: 1rem;
+        left: 0;
+        right: 0;
+        width: 100%;
         background: white;
         flex-direction: column;
         align-items: flex-start;
-        padding: 1rem;
-        border-radius: var(--radius);
+        padding: 1.25rem;
+        border-radius: 0 0 var(--radius) var(--radius);
         box-shadow: var(--shadow-soft);
         border: 1px solid #eef1f7;
         opacity: 0;
